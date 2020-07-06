@@ -1,0 +1,51 @@
+<!--
+  Step 1: This is your descretion how you would like to display data,
+  but you must list display only one document based on the passed ID.
+-->
+<%- include ('../partials/header') %>
+<div class="container my-5">
+  <header>
+    <h1>
+      <%= character.name %>
+      <a href="/characters/<%= character.id %>/edit">
+        <i class="fa fa-edit"></i>
+      </a> 
+    </h1>
+    <br>
+    <small>
+      <%= (character.updatedAt.toLocaleString("en-CA")) %> 
+    </small>
+    <p><strong>Created By: <%= character.user.fullname %> </strong></p>
+  </header>
+  <hr>
+  <div class="content">
+    <h3>General</h3>
+    <hr>
+    <p>
+      <%= character.description%>  
+    </p>
+    <p><em>~<%= character.origin %> </em></p>
+    <hr>
+    <h3>Stats</h3>
+    <hr>
+    <pre style="font-size: larger; padding-top: 2%;">
+      <strong>Str: <%= character.str %>   Int: <%= character.int %>   Dex: <%= character.dex %>
+
+      Con: <%= character.con %>   Cha: <%= character.cha %>   Luc: <%= character.luc %></strong>
+    </pre>
+    <hr>
+    <h3>Skills</h3>
+    <hr>
+    <ul>
+      <li><%= character.mainSkill %> </li>
+      <li><%= character.secSkill %> </li>
+    </ul>
+    <h3>Equipment</h3>
+    <hr>
+    <ul>
+      <li><%= character.weapon %> </li>
+      <li><%= character.armor %> </li>
+    </ul>
+  </div>
+</div>
+<%- include ('../partials/footer') %> 
