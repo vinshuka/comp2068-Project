@@ -37,6 +37,10 @@ const CharacterSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  origin: {
+    type: String,
+    required: true
+  },
   str: {
     type: Number,
     required: true
@@ -77,9 +81,9 @@ const CharacterSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  origin: {
+  story: {
     type: String,
-    required: true
+    required: false
   }
 }, {
   timestamps: true

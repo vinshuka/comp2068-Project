@@ -19,9 +19,9 @@
     <label for="gender">Gender:</label>
     <select name="gender" class="form-control">
         <option value="">---Select Gender---</option>
-        <option <%= formData.gender && formData.gender === 'MALE' ? 'selected' : null %>  value="MALE">Male</option>
-        <option <%= formData.gender && formData.gender === 'FEMALE' ? 'selected' : null %> value="FEMALE">Female</option>
-        <option <%= formData.gender && formData.gender === 'NONE' ? 'selected' : null %> value="NONE">None</option>
+        <option <%= formData.gender && formData.gender === 'Male' ? 'selected' : null %>  value="Male">Male</option>
+        <option <%= formData.gender && formData.gender === 'Female' ? 'selected' : null %> value="Female">Female</option>
+        <option <%= formData.gender && formData.gender === 'None' ? 'selected' : null %> value="None">None</option>
     </select>
   </div>
 
@@ -29,9 +29,9 @@
     <label for="race">Race:</label>
     <select name="race" class="form-control">
         <option value="">---Select Race---</option>
-        <option <%= formData.race && formData.race === 'HUMAN' ? 'selected' : null %>  value="HUMAN">Human</option>
-        <option <%= formData.race && formData.race === 'ELF' ? 'selected' : null %> value="ELF">Elf</option>
-        <option <%= formData.race && formData.race === 'DWARF' ? 'selected' : null %> value="DWARF">Dwarf</option>
+        <option <%= formData.race && formData.race === 'Human' ? 'selected' : null %>  value="Human">Human</option>
+        <option <%= formData.race && formData.race === 'Elf' ? 'selected' : null %> value="Elf">Elf</option>
+        <option <%= formData.race && formData.race === 'Dwarf' ? 'selected' : null %> value="Dwarf">Dwarf</option>
     </select>
   </div>
 
@@ -39,9 +39,9 @@
     <label for="class">Class:</label>
     <select id="classDrop" name="class" class="form-control">
         <option value="">---Select Class---</option>
-        <option <%= formData.class && formData.class ==='FIGHTER' ? 'selected' : null %>  value="FIGHTER">Fighter</option>
-        <option <%= formData.class && formData.class === 'MAGE' ? 'selected' : null %> value="MAGE">Mage</option>
-        <option <%= formData.class && formData.class === 'RANGER' ? 'selected' : null %> value="RANGER">Ranger</option>
+        <option <%= formData.class && formData.class ==='Fighter' ? 'selected' : null %>  value="Fighter">Fighter</option>
+        <option <%= formData.class && formData.class === 'Mage' ? 'selected' : null %> value="Mage">Mage</option>
+        <option <%= formData.class && formData.class === 'Ranger' ? 'selected' : null %> value="Ranger">Ranger</option>
     </select>
   </div>
 
@@ -49,9 +49,9 @@
     <label for="origin">Origin:</label>
     <select name="origin" class="form-control">
         <option value="">---Select Origin---</option>
-        <option <%= formData.origin && formData.origin === 'HERO' ? 'selected' : null %>  value="HERO">Hero</option>
-        <option <%= formData.origin && formData.origin === 'SCHOLAR' ? 'selected' : null %> value="SCHOLAR">Scholar</option>
-        <option <%= formData.origin && formData.origin === 'CRIMINAL' ? 'selected' : null %> value="CRIMINAL">Criminal</option>
+        <option <%= formData.origin && formData.origin === 'Hero' ? 'selected' : null %>  value="Hero">Hero</option>
+        <option <%= formData.origin && formData.origin === 'Scholar' ? 'selected' : null %> value="Scholar">Scholar</option>
+        <option <%= formData.origin && formData.origin === 'Criminal' ? 'selected' : null %> value="Criminal">Criminal</option>
     </select>
   </div>
 
@@ -95,16 +95,16 @@
     <select id="mainSkillSelect" name="mainSkill" class="form-control">
       <option value="">---Select Skill---</option>
       <optgroup label="Fighter Skills">
-        <option <%= formData.mainSkill && formData.mainSkill === 'SLASH' ? 'selected' : null %> value="SLASH">Slash</option>
-        <option <%= formData.mainSkill && formData.mainSkill === 'SHIELD BASH' ? 'selected' : null %> value="SHIELD BASH">Shield Bash</option>
+        <option <%= formData.mainSkill && formData.mainSkill === 'Slash' ? 'selected' : null %> value="Slash">Slash</option>
+        <option <%= formData.mainSkill && formData.mainSkill === 'Shield Bash' ? 'selected' : null %> value="Shield Bash">Shield Bash</option>
       </optgroup>
       <optgroup label="Mage Skills">
-        <option <%= formData.mainSkill && formData.mainSkill === 'FIRE BALL' ? 'selected' : null %> value="FIRE BALL">Fire Ball</option>
-        <option <%= formData.mainSkill && formData.mainSkill === 'ICE BLAST' ? 'selected' : null %> value="ICE BLAST">Ice Blast</option>
+        <option <%= formData.mainSkill && formData.mainSkill === 'Fire Ball' ? 'selected' : null %> value="Fire Ball">Fire Ball</option>
+        <option <%= formData.mainSkill && formData.mainSkill === 'Ice Blast' ? 'selected' : null %> value="Ice Blast">Ice Blast</option>
       </optgroup>
       <optgroup label="Ranger Skills">
-        <option <%= formData.mainSkill && formData.mainSkill === 'BACKSTAB' ? 'selected' : null %> value="BACKSTAB">Backstab</option>
-        <option <%= formData.mainSkill && formData.mainSkill === 'MULTISHOT' ? 'selected' : null %> value="MULTISHOT">Multishot</option>
+        <option <%= formData.mainSkill && formData.mainSkill === 'Backstab' ? 'selected' : null %> value="Backstab">Backstab</option>
+        <option <%= formData.mainSkill && formData.mainSkill === 'Multishot' ? 'selected' : null %> value="Multishot">Multishot</option>
       </optgroup> 
     </select>
   </div>
@@ -115,16 +115,16 @@
     <select id="secSkillSelect" name="secSkill" class="form-control">
       <option value="">---Select Skill---</option>
       <optgroup label="Fighter Skills">
-        <option <%= formData.secSkill && formData.secSkill === 'DEFEND' ? 'selected' : null %> value="DEFEND">Defend</option>
-        <option <%= formData.secSkill && formData.secSkill === 'PROVOKE' ? 'selected' : null %> value="PROVOKE">Provoke</option>
+        <option <%= formData.secSkill && formData.secSkill === 'Defend' ? 'selected' : null %> value="Defend">Defend</option>
+        <option <%= formData.secSkill && formData.secSkill === 'Provoke' ? 'selected' : null %> value="Provoke">Provoke</option>
       </optgroup>
       <optgroup label="Mage Skills">
-        <option <%= formData.secSkill && formData.secSkill === 'DETECT MAGIC' ? 'selected' : null %> value="DETECT MAGIC">Detect Magic</option>
-        <option <%= formData.secSkill && formData.secSkill === 'HEAL' ? 'selected' : null %> value="HEAL">Heal</option>
+        <option <%= formData.secSkill && formData.secSkill === 'Detect Magic' ? 'selected' : null %> value="Detect Magic">Detect Magic</option>
+        <option <%= formData.secSkill && formData.secSkill === 'Heal' ? 'selected' : null %> value="Heal">Heal</option>
       </optgroup>
       <optgroup label="Ranger Skills">
-        <option <%= formData.secSkill && formData.secSkill === 'STEAL' ? 'selected' : null %> value="STEAL">Steal</option>
-        <option <%= formData.secSkill && formData.secSkill === 'SNEAK' ? 'selected' : null %> value="SNEAK">Defend</option>
+        <option <%= formData.secSkill && formData.secSkill === 'Steal' ? 'selected' : null %> value="Steal">Steal</option>
+        <option <%= formData.secSkill && formData.secSkill === 'Sneak' ? 'selected' : null %> value="Sneak">Sneak</option>
       </optgroup> 
     </select>
   </div>
@@ -134,16 +134,16 @@
     <select id="weaponSelect" name="weapon" class="form-control">
       <option value="">---Select Weapon---</option>
       <optgroup label="Fighter Weapons">
-        <option <%= formData.weapon && formData.weapon === 'SWORD AND SHIELD' ? 'selected' : null %> value="SWORD AND SHIELD">Sword and Shield</option>
-        <option <%= formData.weapon && formData.weapon === 'TWO-HANDED AXE' ? 'selected' : null %> value="TWO-HANDED AXE">Two-Handed Axe</option>
+        <option <%= formData.weapon && formData.weapon === 'Sword and Shield' ? 'selected' : null %> value="Sword and Shield">Sword and Shield</option>
+        <option <%= formData.weapon && formData.weapon === 'Two-Handed Axe' ? 'selected' : null %> value="Two-Handed Axe">Two-Handed Axe</option>
       </optgroup>
       <optgroup label="Mage Weapons">
-        <option <%= formData.weapon && formData.weapon === 'STAFF' ? 'selected' : null %> value="STAFF">Staff</option>
-        <option <%= formData.weapon && formData.weapon === 'WAND' ? 'selected' : null %> value="WAND">Wand</option>
+        <option <%= formData.weapon && formData.weapon === 'Staff' ? 'selected' : null %> value="Staff">Staff</option>
+        <option <%= formData.weapon && formData.weapon === 'Wand' ? 'selected' : null %> value="Wand">Wand</option>
       </optgroup>
       <optgroup label="Ranger Weapons">
-        <option <%= formData.weapon && formData.weapon === 'BOW' ? 'selected' : null %> value="BOW">Bow</option>
-        <option <%= formData.weapon && formData.weapon === 'DAGGERS' ? 'selected' : null %> value="DAGGERS">Daggers</option>
+        <option <%= formData.weapon && formData.weapon === 'Bow' ? 'selected' : null %> value="Bow">Bow</option>
+        <option <%= formData.weapon && formData.weapon === 'Daggers' ? 'selected' : null %> value="Daggers">Daggers</option>
       </optgroup>
     </select>
   </div>
@@ -153,18 +153,25 @@
     <select id="armorSelect" name="armor" class="form-control">
       <option value="">---Select Armor---</option>
       <optgroup label="Figher Armor">
-        <option <%= formData.armor && formData.armor === 'PLATE MAIL' ? 'selected' : null %> value="PLATE MAIL">Plate Mail</option>
-        <option <%= formData.armor && formData.armor === 'CHAIN MAIL' ? 'selected' : null %> value="CHAIN MAIL">Chain Mail</option>
+        <option <%= formData.armor && formData.armor === 'Plate Mail' ? 'selected' : null %> value="Plate Mail">Plate Mail</option>
+        <option <%= formData.armor && formData.armor === 'Chain Mail' ? 'selected' : null %> value="Chain Mail">Chain Mail</option>
       </optgroup>
       <optgroup label="Mage Armor">
-        <option <%= formData.armor && formData.armor === 'ROBE' ? 'selected' : null %> value="ROBE">Robe</option>
-        <option <%= formData.armor && formData.armor === 'CLOAK' ? 'selected' : null %> value="CLOAK">Cloak</option>
+        <option <%= formData.armor && formData.armor === 'Robe' ? 'selected' : null %> value="Robe">Robe</option>
+        <option <%= formData.armor && formData.armor === 'Cloak' ? 'selected' : null %> value="Cloak">Cloak</option>
       </optgroup>
       <optgroup label="Ranger Armor">
-        <option <%= formData.armor && formData.armor === 'LEATHER' ? 'selected' : null %> value="LEATHER">Leather</option>
-        <option <%= formData.armor && formData.armor === 'SCALE' ? 'selected' : null %> value="SCALE">Scale</option>
+        <option <%= formData.armor && formData.armor === 'Leather' ? 'selected' : null %> value="Leather">Leather</option>
+        <option <%= formData.armor && formData.armor === 'Scale' ? 'selected' : null %> value="Scale">Scale</option>
       </optgroup>
     </select>
+  </div>
+
+  <div class="form-group">
+    <label for="story">Story</label>
+    <textarea name="story" class="form-control summernote">
+        <%= formData.story %> 
+    </textarea>
   </div>
 
   <hr>
