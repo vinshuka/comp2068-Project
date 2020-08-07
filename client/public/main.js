@@ -1,4 +1,4 @@
-    document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     $('.summernote').summernote({
         placeholder: "Tell the character's story...",
         tabsize: 2,

@@ -25,13 +25,9 @@ exports.index = async (req, res) => {
     .populate('user')
     .sort({updatedAt: 'desc'});
 
-    res.render(`${viewPath}/index`, {
-      pageTitle: 'Character List',
-      characters: characters
-    });
+    res.status(200).json(characters);
   } catch (error) {
-    req.flash('danger', `There was an error displaying the character list: ${error}`);
-    res.redirect('/');
+    res.status(400).json({message: 'There was an error fetching the characters'});
   }
 };
 
@@ -40,14 +36,9 @@ exports.show = async (req, res) => {
     const character = await Character.findById(req.params.id)
     .populate('user');
 
-    res.render(`${viewPath}/show`, {
-      pageTitle: character.name,
-      character: character
-    });
+    res.status(200).json(character);
   } catch (error) {
-    req.flash('danger', `There was an error displaying the character: ${error}`);
-    res.session.formData = req.body;
-    res.redirect('/');
+    res.status(400).json({message: "There was an error getting this character"});
   }
 };
 
@@ -61,13 +52,12 @@ exports.create = async (req, res) => {
   try{
     const {user: email } = req.session.passport;
     const user = await User.findOne({email:email});
+
     const character = await Character.create({user: user._id, ...req.body});
-    req.flash('success', 'Character was created successfully');
-    res.redirect(`/characters/${character.id}`);
+
+    res.status(200).json(character);
   } catch (error) {
-    req.flash('danger', `There was an error creating this character: ${error}`);
-    req.session.formData = req.body;
-    res.redirect('/characters/new');
+    res.status(400).json({message: "There was an error creating the character", error});
   }
 };
 
@@ -107,10 +97,8 @@ exports.update = async (req, res) => {
 exports.delete = async (req, res) => {
   try {
     await Character.deleteOne({_id: req.body.id});
-    req.flash('success', 'The character was deleted successfully.');
-    res.redirect('/characters');
+    res.status(200).json({message: "The character was deleted successfully"});
   } catch (error) {
-    req.flash('danger', `There was an error deleting this character: ${error}`);
-    res.redirect('/characters');
+    res.status(400).json({message: "There was a problem deleting the character"});
   }
 };

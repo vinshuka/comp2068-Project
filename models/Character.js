@@ -86,7 +86,10 @@ const CharacterSchema = new mongoose.Schema({
     required: false
   }
 }, {
-  timestamps: true
+  timestamps: true,
+  toJSON: {
+    getters: true
+  }
 });
 
 CharacterSchema.virtual('description')
