@@ -2,6 +2,8 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Home from './pages/Home';
+
+import Register from './users/Register';
 import Login from './sessions/Login';
 import Logout from './sessions/Logout';
 
@@ -14,6 +16,12 @@ function Routes ({user, setUser}) {
     return (
         <Switch>
             <Route exact path="/" component={Home}/>
+            <Route exact path='/register' render={
+                renderProps => <Register
+                {...renderProps}
+                setUser={setUser}
+                />
+            }/>
             <Route exact path="/login" render={
                 renderProps => <Login
                     {...renderProps}
